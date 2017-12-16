@@ -1,0 +1,11 @@
+Manage LibreMesh nodes using Ansible
+
+    # Assuming you have ansible installed (apt-get install ansible)
+    git clone https://github.com/altergui/ansible-paravachasca.git
+    cd ansible-paravachasca
+    # Example single command
+    time ansible -m raw all -a ' uptime '
+    # Basic shell structures work as well
+    time ansible -m raw all -a ' logread | grep crond.info '
+    # Host selection accepts some regular expressions (si-tato, si-radio, etc will match)
+    time ansible -m raw si-* -a ' bmx6 -cp '
